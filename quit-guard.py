@@ -5,13 +5,15 @@ options = [
 	"Quit Now!",
 	"Close View",
 	"Close Window",
-	"Cancel",
+	"Save as...",
+	"Cancel"
 ]
 
 commands = {
 	"Quit Now!": "exit",
 	"Close View": "close",
-	"Close Window": "close_window"
+	"Close Window": "close_window",
+	"Save as...": "prompt_save_as"
 }
 
 class QuitGuardCommand(sublime_plugin.TextCommand):
