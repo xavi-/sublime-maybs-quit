@@ -3,30 +3,25 @@ from sublime import Window
 
 from time import time;
 
-QUIT = "Quit Now!"
-CLOSE_VIEW = "Close View"
-CLOSE_WINDOW = "Close Window"
-CANCEL = "Cancel"
-
 options = [
-	QUIT,
-	CLOSE_VIEW,
-	CLOSE_WINDOW,
-	CANCEL
+	"Quit Now!",
+	"Close View",
+	"Close Window",
+	"Cancel",
 ]
+
+commands = {
+	"Quit Now!": "exit",
+	"Close View": "close",
+	"Close Window": "close_window"
+}
 
 class QuitGuardCommand(sublime_plugin.TextCommand):
 	def on_done(self, idx):
 		option = options[idx]
 
-		if option == CANCEL and idx < 0:
-			pass
-		elif option == QUIT:
-			self.view.window().run_command("exit")
-		elif option == CLOSE_WINDOW:
-			self.view.window().run_command("close_window")
-		elif option == CLOSE_VIEW:
-			self.view.window().run_command("close")
+		if option in commands:
+			self.view.window().run_command(commands[option])
 
 	def run(self, edit):
 		window = self.view.window()
