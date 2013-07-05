@@ -1,0 +1,5 @@
+[
+	{
+		"keys": ["super+q"], "command": "quit_guard"
+	}
+]
