@@ -8,7 +8,7 @@ Quitting shouldn't be so easy.  Modal confirmation dialogs are annoying, so why 
 
 - <kbd>ctrl/cmd</kbd> + <kbd>q</kbd>: opens up a quick panel (shown below) that let you choose from a number of options
 
-![Quit menu](http://imgur.com/efCzLYB)
+![Quit menu](http://xavi.co/static/maybs-quit-menu.png)
 
 ### Why not just change your shortcuts
 
