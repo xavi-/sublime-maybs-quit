@@ -1,8 +1,6 @@
 import sublime, sublime_plugin
 from sublime import Window
 
-from time import time;
-
 options = [
 	"Quit Now!",
 	"Close View",
