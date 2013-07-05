@@ -4,12 +4,10 @@ from sublime import Window
 from time import time;
 
 class QuitGuardCommand(sublime_plugin.TextCommand):
-	lastQuitCommand = -1
+	def on_done(self, idx):
+		if idx == 1:
+			self.view.window().run_command("exit")
 
 	def run(self, edit):
-		now = time()
-
-		if now - QuitGuardCommand.lastQuitCommand > 2:
-			QuitGuardCommand.lastQuitCommand = now
-		else:
-			self.view.window().run_command("exit")
+		window = self.view.window()
+		window.show_quick_panel(["Cancel", "Quit Now!"], self.on_done)
