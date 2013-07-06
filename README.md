@@ -16,9 +16,11 @@ Muscle memory... why fight it?
 
 ## Getting Maybs Quit
 
-Currently the easiest way to get Maybs Quit is by cloning this git repository into your [Packages Directory](http://sublimetext.info/docs/en/basic_concepts.html):
+The easiest way to get SelectUntil is with [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation).  Search for "Maybs Quit".
 
-	git://github.com/xavi-/sublime-quit-guard.git
+Alternatively you can clone this git repository into your [Packages Directory](http://sublimetext.info/docs/en/basic_concepts.html):
+
+	git://github.com/xavi-/sublime-maybs-quit.git
 
 ## Developed by
 
