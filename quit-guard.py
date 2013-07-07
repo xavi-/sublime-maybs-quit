@@ -11,10 +11,10 @@ class QuitGuardCommand(sublime_plugin.TextCommand):
 		('Cancel', None, ),
 	)
 
-	OPTIONS_NAMES = tuple((opt[0] for opt in OPTIONS))
+	OPTION_NAMES = tuple((opt[0] for opt in OPTIONS))
 
 	def run(self, edit):
-		self.view.window().show_quick_panel(self.OPTIONS_NAMES, self.on_done)
+		self.view.window().show_quick_panel(self.OPTION_NAMES, self.on_done)
 
 	def on_done(self, idx):
 		option, command = self.OPTIONS[idx]
