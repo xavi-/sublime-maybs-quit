@@ -1,28 +1,23 @@
-import sublime, sublime_plugin
-from sublime import Window
+import sublime_plugin
 
-options = [
-    "Quit Now!",
-    "Close View",
-    "Close Window",
-    "Save as...",
-    "Cancel"
-]
-
-commands = {
-    "Quit Now!": "exit",
-    "Close View": "close",
-    "Close Window": "close_window",
-    "Save as...": "prompt_save_as"
-}
 
 class QuitGuardCommand(sublime_plugin.TextCommand):
-    def on_done(self, idx):
-        option = options[idx]
 
-        if option in commands:
-            self.view.window().run_command(commands[option])
+    OPTIONS = (
+        ('Quit Now!', 'exit', ),
+        ('Close View', 'close', ),
+        ('Close Window', 'close_window', ),
+        ('Save as...', 'prompt_save_as', ),
+        ('Cancel', None, ),
+    )
+
+    OPTIONS_NAMES = tuple((opt[0] for opt in OPTIONS))
 
     def run(self, edit):
-        window = self.view.window()
-        window.show_quick_panel(options, self.on_done)
+        self.view.window().show_quick_panel(self.OPTIONS_NAMES, self.on_done)
+
+    def on_done(self, idx):
+        option, command = self.OPTIONS[idx]
+
+        if command:
+            self.view.window().run_command(command)
