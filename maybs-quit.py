@@ -1,6 +1,5 @@
 import sublime_plugin
 
-
 class QuitGuardCommand(sublime_plugin.TextCommand):
 
 	OPTIONS = (
