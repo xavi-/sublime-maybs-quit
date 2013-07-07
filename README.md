@@ -16,7 +16,7 @@ Muscle memory... why fight it?
 
 ## Getting Maybs Quit
 
-The easiest way to get Maybs Quit is with [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation). Then search for "Maybs Quit".
+The easiest way to get Maybs Quit is with [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation). Search for "Maybs Quit".
 
 Alternatively you can clone this Git repository into your [Packages Directory](http://sublimetext.info/docs/en/basic_concepts.html):
 
