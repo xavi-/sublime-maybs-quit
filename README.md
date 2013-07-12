@@ -10,7 +10,7 @@ Quitting shouldn't be so easy. Modal confirmation dialogs are annoying, so why n
 
 ![Quit menu](http://xavi.co/static/maybs-quit-menu.png)
 
-### Why not just change your shortcuts
+### Why not just change your shortcuts?
 
 Muscle memory... why fight it?
 
