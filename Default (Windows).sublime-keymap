@@ -1,5 +1,5 @@
 [
 	{
-		"keys": ["ctrl+q"], "command": "quit_guard"
+		"keys": ["alt+f4"], "command": "quit_guard"
 	}
 ]
