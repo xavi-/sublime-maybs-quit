@@ -15,6 +15,12 @@ Quitting shouldn't be so easy. Modal confirmation dialogs are annoying, so why n
 	<img src="http://xavi.co/static/maybs-quit-menu.png" alt="Quit menu" />
 </p>
 
+Optionally you can also make this menu appear before the last view in a window is closed by added this keybaord shortcut to your settings:
+
+```json
+{ "keys": ["super+w"], "command": "close_guard" }
+```
+
 ### Why not just change your shortcuts?
 
 Muscle memory... why fight it?

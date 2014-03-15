@@ -20,3 +20,11 @@ class QuitGuardCommand(sublime_plugin.TextCommand):
 
 		if command:
 			self.view.window().run_command(command)
+
+class CloseGuardCommand(QuitGuardCommand):
+
+	def run(self, edit):
+		window = self.view.window()
+
+		if len(window.views()) > 1: window.run_command("close")
+		else: super(CloseGuardCommand, self).run(edit)
