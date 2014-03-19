@@ -23,6 +23,14 @@ class QuitGuardCommand(sublime_plugin.TextCommand):
 
 class CloseGuardCommand(QuitGuardCommand):
 
+	OPTIONS = (
+		('Close Window', 'close_window', ),
+		('Save as...', 'prompt_save_as', ),
+		('Cancel', None, ),
+	)
+
+	OPTION_NAMES = [ opt[0] for opt in OPTIONS ]
+
 	def run(self, edit):
 		window = self.view.window()
 
