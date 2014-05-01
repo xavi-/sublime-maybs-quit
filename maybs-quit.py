@@ -6,6 +6,7 @@ class QuitGuardCommand(sublime_plugin.TextCommand):
 		('Quit Now!', 'exit', ),
 		('Close View', 'close', ),
 		('Close Window', 'close_window', ),
+		('Close Project', 'close_project'),
 		('Save as...', 'prompt_save_as', ),
 		('Cancel', None, ),
 	)
